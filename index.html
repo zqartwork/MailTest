@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="mail-section">
+            <div class="inner-wrapper">
+                <input type="button" value="send" onclick="sendMail()">
+            </div>
+        </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        function sendMail() {
+            Email.send({
+                SecureToken: "1e08db6b-50d0-4a2c-b015-26134aa904f4",
+                To: 'zqartworkofficial@gmail.com',
+                From: "zqartworkofficial@gmail.com",
+                Subject: "test",
+                Body: "test",
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
+</body>
+
+</html>
